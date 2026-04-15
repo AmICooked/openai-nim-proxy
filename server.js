@@ -11,7 +11,11 @@ app.use(cors());
 app.use(express.json());
 // Root route
 app.get('/', (req, res) => {
-  res.send('✅ OpenAI NIM Proxy is running! Use /v1/chat/completions endpoint.');
+  res.send('✅ OpenAI NIM Proxy is running!');
+  res.send('\nAvailable endpoints:');
+  res.send('\n- /health');
+  res.send('\n- /v1/models');
+  res.send('\n- /v1/chat/completions');
 });
 
 // NVIDIA NIM API configuration
